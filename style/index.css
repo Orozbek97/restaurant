@@ -1,0 +1,217 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+header {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+}
+.header {
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.container-2 {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.container-3 {
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 0 20px;
+   }
+.nav a{
+    color: white;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.15em;
+    margin-left: 15px;
+}
+.nav a:hover {
+   color: #D1A954;
+   font-style: italic;
+}
+
+.open{
+    display: flex !important;
+}
+
+.nav{
+    display: flex;
+}
+
+.nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+}
+
+.burger{
+    display: block;
+    position: relative;
+    z-index: 50;
+    align-items: center;
+    justify-content: flex-end;
+    width: 30px;
+    height: 18px;
+}
+
+.burger span{
+    height: 2px;
+    width: 80%;
+    transform: scale(1);
+    background-color: #FAF6F2;
+}
+
+.burger::before, .burger::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: #FAF6F2;
+    transition: all 0.3s ease 0s;
+}
+
+.burger::before { top: 0 }
+
+.burger::after { bottom: 0 }
+
+.burger.active span { transform: scale(0) }
+
+.burger.active::before{
+    top: 50%;
+    transform: rotate(-45deg) translate(0, -50%);
+}
+
+.burger.active::after{
+    bottom: 50%;
+    transform: rotate(45deg) translate(0, 50%);
+}
+
+
+.services-1 {
+    background-image: url(/assets/image1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 650px;
+    border-radius: 13px;
+        border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.services-2 {
+    background-image: url(/assets/image2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 650px;
+    border-radius: 13px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.services-3 {
+    background-image: url(/assets/image3.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 650px;
+    border-radius: 13px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.box {
+    position: relative;
+    overflow: hidden;
+    }
+.box:hover .descrition {
+    position: absolute;
+    bottom: 0;
+    transition: 0.7s;
+    width: 100%;
+}
+.descrition{
+    position: absolute;
+    bottom: -145px;
+}
+.galery {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    }
+    
+    .image-1 { grid-area: 1 / 1 / 4 / 3; }
+    .image-2 { grid-area: 1 / 3 / 4 / 7; }
+    .image-3 { grid-area: 1 / 7 / 4 / 10; }
+    .image-4 { grid-area: 4 / 1 / 10 / 6; }
+    .image-5 { grid-area: 4 / 6 / 7 / 10; }
+    .image-6 { grid-area: 7 / 6 / 10 / 10; }
+
+
+.information {
+    background-image: url(/assets/download.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.box h2 {
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 145%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+.name input {
+    width: 100%;
+    padding: 12px 5px ;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid  #D0D0D0;
+}
+.e-mail input {
+    width: 100%;
+    padding: 12px 5px ;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid  #D0D0D0;
+}
+textarea {
+    width: 100%;
+    height: 170px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #D0D0D0;
+    border-radius: 1px;
+    background-color: none;
+    font-size: 16px;
+    resize: none;
+}
+.bottom-photos {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    
+    .bottom-photo-1 { grid-area: 1 / 1 / 2 / 3; }
+    .bottom-photo-2 { grid-area: 1 / 3 / 2 / 5; }
+    .bottom-photo-3 { grid-area: 1 / 5 / 2 / 7; }
+    .bottom-photo-4 { grid-area: 1 / 7 / 2 / 9; }
+    .bottom-photo-5 { grid-area: 1 / 9 / 2 / 11; }
+    .bottom-photo-6 { grid-area: 1 / 11 / 2 / 13; }
+
+    
